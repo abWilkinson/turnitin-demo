@@ -32,4 +32,9 @@ public enum AgeRange {
                 .filter(r -> r.label.equalsIgnoreCase(label))
                 .findFirst();
     }
+
+    @Override
+    public String toString() {
+        return label;
+    }
 }

@@ -82,6 +82,8 @@ created along with some sample data as part of a Flyway database migration.
 
 The search is available as a `GET` request at http://localhost:8080/api/athletes/search and can be triggered via browser, curl, postman etc.
 
+It is also available via `swagger-ui` at http://localhost:8080/swagger-ui/index.html
+
 The filtering can be added via query parameters:
 ```
 name - string (e.g. anna). Matches anywhere in a name, not exact matching
