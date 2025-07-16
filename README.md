@@ -40,7 +40,7 @@ often the data changes, as the materialized view would need to be refreshed when
 #### Merging queries
 
 When filtering by skills this is currently a 2-step process, this is to reduce the SQL complexity but comes at a cost
-or round trips. This could be optimized by merging the recursive CTE into the main query.
+of additional round trips. This could be optimized by merging the recursive CTE into the main query.
 
 ### Potential Alternatives
 This approach uses a normalized relational schema, but there are other viable options I considered.
@@ -77,8 +77,8 @@ The application is developed using Spring Boot (Java 21) built with Maven.
 ## Running the app
 
 The app comes with a `docker-compose.yml` file. It can be run using `docker-compose up` or `docker-compose up db`
-to only start the postgres database and run the app locally through an IDE. On starting the app, the schema will be
-created along with some sample data.
+to only start the postgres database and run the app locally (e.g. through an IDE). On starting the app, the schema will be
+created along with some sample data as part of a Flyway database migration.
 
 The search is available as a `GET` request at http://localhost:8080/api/athletes/search and can be triggered via browser, curl, postman etc.
 
