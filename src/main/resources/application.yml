@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: none
+    format_sql: false
+    show-sql: false
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        descriptor:
+#          sql: TRACE
+#        jdbc:
+#          bind: TRACE
